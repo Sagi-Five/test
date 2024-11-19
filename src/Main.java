@@ -1,19 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a number: ");
+        int n = scanner.nextInt();
+        int counter = 0;
+        if (n == 0)
+            counter = 1;
+        while (n > 0) {
+            if (n % 10 == 0)
+                counter++;
+            n = n / 10;
 
-
-  Scanner sc = new Scanner(System.in);
-        int [] arr = new int[2];
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print("Enter any number Matok :) : ");
-        arr[i] = sc.nextInt();
         }
-        int result = (int) Math.pow(arr[0], arr[1]);
-
-        System.out.println(result);
+        System.out.println("the amount of zero is: "+counter);
     }
 }
